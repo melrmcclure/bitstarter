@@ -89,7 +89,7 @@ if(require.main == module) {
         .parse(process.argv);
 
     if(program.url){
-	//console.log("checking URL");
+	//console.log("checking provided URL");
         rest.get(program.url).on('complete', function(result){
             checkJson = checkHtmlUrl(result, program.checks);
             var outJson = JSON.stringify(checkJson, null, 4);
